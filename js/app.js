@@ -11,6 +11,9 @@ const form = document.querySelector('#form');
 const search = document.querySelector('#search');
 
 // =========== get initial movies ===========
+
+// eslint no-use-before-define
+
 getMovies(API_URL);
 async function getMovies(url) {
   const res = await fetch(url);
@@ -43,11 +46,11 @@ function displayMovies(movie) {
 function classRate(vote) {
   if (vote >= 8) {
     return 'green';
-  } else if (vote >= 5) {
-    return 'orange';
-  } else {
-    return 'red';
   }
+  if (vote >= 5) {
+    return 'orange';
+  }
+  return 'red';
 }
 
 form.addEventListener('submit', (e) => {
