@@ -1,8 +1,6 @@
-const API_URL =
-  'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=114d2496fece78a34687ca32ab825bda&page=1';
+const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=114d2496fece78a34687ca32ab825bda&page=1';
 const ImgSrc = 'https://image.tmdb.org/t/p/w1280';
-const SearchAPI =
-  'https://api.themoviedb.org/3/search/movie?api_key=114d2496fece78a34687ca32ab825bda&query="';
+const SearchAPI = 'https://api.themoviedb.org/3/search/movie?api_key=114d2496fece78a34687ca32ab825bda&query="';
 
 // =========== getting the value from the dom ===========
 
@@ -11,8 +9,6 @@ const form = document.querySelector('#form');
 const search = document.querySelector('#search');
 
 // =========== get initial movies ===========
-
-// eslint no-use-before-define
 
 getMovies(API_URL);
 async function getMovies(url) {
@@ -24,7 +20,9 @@ async function getMovies(url) {
 function displayMovies(movie) {
   main.innerHTML = '';
   movie.forEach((movie) => {
-    const { title, poster_path, vote_average, overview } = movie;
+    const {
+      title, poster_path, vote_average, overview,
+    } = movie;
 
     const movieData = document.createElement('div');
     movieData.classList.add('movie');
