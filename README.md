@@ -34,6 +34,8 @@ You're free to use this project however you like it for educational purposes. Ju
 
 ### LIVE DEMO
 
+[MovieApp](https://nickemma.github.io/capstone-project-1/)
+
 ## Authors
 
 👤 **Nicholas Emmanuel**
